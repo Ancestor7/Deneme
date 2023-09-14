@@ -1,0 +1,24 @@
+﻿@page "/Dialogs"
+
+<h2>Welcome to dialogs with electron</h2>
+
+<div class="row">
+    <div class="col-4">
+        <h3>Message Box Dialog</h3>
+        <button class="btn btn-success" @onclick="ShowMessageBoxAsync">Show Message Box</button>
+    </div>
+    <div class="col-4">
+
+    </div>
+    <div class="col-4">
+
+    </div>
+
+</div>
+
+@code {
+    async Task ShowMessageBoxAsync()
+    {
+        await Electron.Dialog.ShowMessageBoxAsync("Hello world!");
+    }
+}
